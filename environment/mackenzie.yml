@@ -1,0 +1,44 @@
+name: mackenzie
+channels:
+  - conda-forge
+dependencies:
+  - python=3.8
+  - black
+  - pylint
+  - cartopy
+  - cftime
+  - dask
+  - dask-jobqueue
+  - dask-labextension
+  - esmf=8.0.0
+  - esmpy=8.0.0
+  - ffmpeg
+  - flake8
+  - git
+  - gsw
+  - ipykernel
+  - ipython
+  - jupyter
+  - jupyterlab=2
+  - jupyterlab-git
+  - jupyter-server-proxy
+  - matplotlib
+  - nc-time-axis
+  - netcdf4
+  - nodejs
+  - numpy
+  - numba
+  - pandas
+  - pandoc
+  - pip
+  - pyresample
+  - pytest
+  - pyyaml
+  - sphinx
+  - scipy
+  - seawater
+  - xarray!=0.16.1
+  - xesmf=0.4.0
+  - xgcm
+  - xhistogram
+  - zarr
