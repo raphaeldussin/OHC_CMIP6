@@ -1,0 +1,3 @@
+cp jobqueue.yml $HOME/.config/dask/jobqueue.yaml
+
+conda env create -f mackenzie.yml

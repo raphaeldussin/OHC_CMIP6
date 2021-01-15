@@ -1,0 +1,38 @@
+distributed:
+  worker:
+    multiprocessing-method: spawn
+    use-file-locking: False
+
+jobqueue:
+  slurm:
+    name: dask-worker
+
+    # Dask worker options
+    cores: 8                    # Total number of cores per job
+    memory: 48GB                # Total amount of memory per job
+    processes: 8                # Number of Python processes per job
+
+    #interface: ib0              # Network interface to use like eth0 or ib0
+    death-timeout: 60           # Number of seconds to wait if a worker can not find a scheduler
+    #local-directory: /ptmp      # Location of fast local storage like /scratch or $TMPDIR
+
+    # SLURM resource manager options
+    shebang: "#!/usr/bin/env bash"
+    queue: batch
+    project: gfdl_O
+    walltime: '00:30:00'
+    scheduler_options:
+      dashboard_address: :18787
+    #env-extra: []
+    #job-cpu: null
+    #job-mem: null
+    #job-extra: []
+    #log-directory: null
+
+labextension:
+  factory:
+     module: 'dask_jobqueue'
+     class: 'SLURMCluster'
+     args: []
+     kwargs:
+       project: gfdl_O
