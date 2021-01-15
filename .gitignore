@@ -1,3 +1,8 @@
+slurm*.out
+worker*
+global.lock
+purge.lock
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
